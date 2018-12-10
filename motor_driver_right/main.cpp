@@ -8,14 +8,10 @@
 Timer Timeout_timer;
 
 ros::NodeHandle  nh;
-// // PWM信号の差動出力ピンを指定
-// PwmOut motor_P(p26);
-// // PWM信号の差動出力 ピンを指定
-// PwmOut motor_N(p25);
 // PWM信号の差動出力ピンを指定
-PwmOut motor_P(LED1);
+PwmOut motor_P(p26);
 // PWM信号の差動出力 ピンを指定
-PwmOut motor_N(LED2);
+PwmOut motor_N(p25);
 DigitalOut ROS_sub_status(LED4);
 
 void messageCb(const std_msgs::Float32& msg) {
